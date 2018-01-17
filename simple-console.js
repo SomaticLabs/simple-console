@@ -1,3 +1,4 @@
+var global = Function('return this')();
 
 var SimpleConsole = function(options) {
 
@@ -383,7 +384,7 @@ var SimpleConsole = function(options) {
 			handle_command(command);
 
 		} else if (e.keyCode === 38) { // Up
-			
+
 			if (--command_index < 0) {
 				command_index = -1;
 				input.value = "";
@@ -392,9 +393,9 @@ var SimpleConsole = function(options) {
 			}
 			input.setSelectionRange(input.value.length, input.value.length);
 			e.preventDefault();
-			
+
 		} else if (e.keyCode === 40) { // Down
-			
+
 			if (++command_index >= command_history.length) {
 				command_index = command_history.length;
 				input.value = "";
@@ -403,9 +404,9 @@ var SimpleConsole = function(options) {
 			}
 			input.setSelectionRange(input.value.length, input.value.length);
 			e.preventDefault();
-			
+
 		} else if (e.keyCode === 46 && e.shiftKey) { // Shift+Delete
-			
+
 			if (input.value === command_history[command_index]) {
 				command_history.splice(command_index, 1);
 				command_index = Math.max(0, command_index - 1)
@@ -413,7 +414,7 @@ var SimpleConsole = function(options) {
 				save_command_history();
 			}
 			e.preventDefault();
-			
+
 		}
 	});
 
@@ -437,3 +438,5 @@ var SimpleConsole = function(options) {
 	this.clear = clear;
 
 };
+
+global.SimpleConsole = SimpleConsole;
