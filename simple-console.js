@@ -439,4 +439,4 @@ var SimpleConsole = function(options) {
 
 };
 
-global.SimpleConsole = SimpleConsole;
+exports = module.exports = SimpleConsole;
