@@ -131,32 +131,32 @@
 	color: gray;
 }
 .error {
-	color: #A00;
-	background: #FFF5F5;
+	background: #A00;
+	color: #fff;
 }
 .dark .error {
-	color: #A00;
-	background: rgba(255, 0, 0, 0.15);
+	background: #A00;
+	color: #fff;
 }
 .warning {
-	color: #8a6300;
-	background: rgba(255, 230, 0, 0.24);
+	color: #292929;
+	background: rgba(255, 230, 0, 1.0);
 }
 .dark .warning {
-	color: #ffdc46;
-	background: rgba(255, 171, 0, 0.2);
+	color: #292929;
+	background: rgba(255, 230, 0, 1.0);
 }
 .info {
-	color: rgb(0, 89, 148);
-	background: rgba(0, 136, 255, 0.17);
+	background: rgb(0, 89, 148);
+	color: #fff;
 }
 .dark .info {
 	color: rgb(98, 155, 193);
 	background: rgba(0, 136, 255, 0.17);
 }
 .success {
-	color: rgb(77, 148, 0);
-	background: rgba(96, 226, 90, 0.17);
+	background: rgb(77, 148, 0);
+	color: #fff;
 }
 .dark .success {
 	color: rgb(138, 212, 58);
